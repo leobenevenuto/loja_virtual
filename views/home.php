@@ -1,1 +1,5 @@
-Conteúdo da página inicial
+<?php 
+
+print_r($list);
+
+?>
