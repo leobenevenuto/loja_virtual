@@ -1,5 +1,20 @@
+<div class="row">
 <?php 
-
-print_r($list);
-
+$a = 0;
 ?>
+<?php foreach($list as $product_item): ?>
+	<div class="col-sm-4">
+		
+		<?php $this->loadView('product_item', $product_item); ?>
+
+	</div>
+	<?php 
+		if($a >= 2){
+			$a = 0;
+			echo '</div><div class="row">';
+		} else {
+		$a++;
+		}
+	?>
+<?php endforeach; ?>
+</div>
