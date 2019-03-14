@@ -293,10 +293,11 @@ footer h3 {
 
 .product_item{
 	padding:10px;
+	border:1px solid #FFF;
 }
 
 .product_item:hover{
-	background-color:#EEE;
+	border:1px solid #EEE;
 }
 
 .product_item a{
@@ -306,7 +307,7 @@ footer h3 {
 
 .product_name{
 	font-weight: bold;
-	color:#0000FF;
+	color:#0e53a5;
 
 }
 
@@ -348,19 +349,53 @@ footer h3 {
 }
 
 .product_tag_red{
-	background-color:#FF0000;
+	background-color:#F8484A;
 
 }
 
 .product_tag_green{
-	background-color:#00FF00;
+	background-color:#59b210;
 
 }
 
 .product_tag_blue{
-	background-color:#0000FF;
+	background-color:#407ac5;
 
 }
+
+.paginationItem{
+	width:40px;
+	height:40px;
+	border:1px solid #DDD;
+	color:#000;
+	font-size:13px;
+	text-align:center;
+	line-height:40px;
+	display:inline-block;
+}
+
+.paginationItem a{
+	display:block;
+	color:#000;
+	text-decoration: none;
+}
+
+.paginationItem:hover{
+	border:1px solid #59b210;
+}
+
+.pag_active{
+	border:1px solid #59b210;
+}
+
+.paginationArea {
+	margin-top:30px;
+}
+
+.dropdown-menu{
+	width:100%;
+}
+
 
 
 
