@@ -6,6 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.min.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.structure.min.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.theme.min.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" type="text/css" />
 	</head>
 	<body>
@@ -39,10 +42,28 @@
 						<div class="head_email">contato@<span>loja2.com.br</span></div>
 						
 						<div class="search_area">
-							<form method="GET">
-								<input type="text" name="s" required placeholder="<?php $this->lang->get('SEARCHFORANITEM') ?>" />
+							<form method="GET" action="<?php echo BASE_URL; ?>busca">
+								<input type="text" name="s" value="<?php echo (!empty($viewData['searchTerm']))?$viewData['searchTerm']:'' ?>" required placeholder="<?php $this->lang->get('SEARCHFORANITEM') ?>" />
 								<select name="category">
+
 									<option value=""><?php $this->lang->get('ALLCATEGORIES') ?></option>
+
+									<?php foreach($viewData['categories'] as $cat): ?>
+									<option <?php echo (!empty($viewData['category']))&&($viewData['category']) == $cat['id']?'selected=selected':''; ?> value="<?php echo $cat['id']; ?>"><?php echo $cat['name'];?></option>
+
+										<?php if(count($cat['subs']) > 0){
+								          		$this->loadView('search_subcategory', array(
+								          		'subs' => $cat['subs'],
+								          		'level' => 1,
+								          		'category' => $viewData['category']
+							          		));
+						          			}
+						          		?>
+						            	
+						            <?php endforeach;?>
+
+
+									
 								</select>
 								<input type="submit" value="" />
 						    </form>
@@ -52,11 +73,11 @@
 						<a href="<?php echo BASE_URL; ?>cart">
 							<div class="cartarea">
 								<div class="carticon">
-									<div class="cartqt">9</div>
+									<div class="cartqt"><?php echo $viewData['cart_qt'] ?></div>
 								</div>
 								<div class="carttotal">
 									<?php $this->lang->get('CART') ?>:<br/>
-									<span>R$ 999,99</span>
+									<span>R$ <?php echo number_format($viewData['cart_subtotal'], 2, ',', '.'); ?></span>
 								</div>
 							</div>
 						</a>
@@ -100,22 +121,14 @@
 		<section>
 			<div class="container">
 				<div class="row">
-				  <div class="col-sm-3">
-				  	<aside>
-				  		<h1><?php $this->lang->get('FILTER') ?></h1>
-				  		<div class="filterarea">
-
-				  		</div>
-
-				  		<div class="widget">
-				  			<h1><?php $this->lang->get('FEATUREDPRODUCTS') ?></h1>
-				  			<div class="widget_body">
-				  				...
-				  			</div>
-				  		</div>
-				  	</aside>
+					<?php if(isset($viewData['sidebar'])): ?>
+				  <div class="col-sm-3"> <!-- filtro -->
+				  	<?php $this->loadView('sidebar', array('viewData'=>$viewData)); ?>
 				  </div>
 				  <div class="col-sm-9"><?php $this->loadViewInTemplate($viewName, $viewData); ?></div>
+				  <?php else:?>
+				  	<div class="col-sm-12"><?php $this->loadViewInTemplate($viewName, $viewData); ?></div>
+				  <?php endif; ?>
 				</div>
 	    	</div>
 	    </section>
@@ -126,7 +139,9 @@
 				  	<div class="widget">
 			  			<h1><?php $this->lang->get('FEATUREDPRODUCTS') ?></h1>
 			  			<div class="widget_body">
-			  				...
+			  				
+			  					<?php $this->loadView('widget_item', array('list'=>$viewData['widget_featured2']))?>
+
 			  			</div>
 			  		</div>
 				  </div>
@@ -134,7 +149,9 @@
 				  	<div class="widget">
 			  			<h1><?php $this->lang->get('ONSALEPRODUCTS') ?></h1>
 			  			<div class="widget_body">
-			  				...
+			  				
+			  				<?php $this->loadView('widget_item', array('list'=>$viewData['widget_sale']))?>
+
 			  			</div>
 			  		</div>
 				  </div>
@@ -142,7 +159,7 @@
 				  	<div class="widget">
 			  			<h1><?php $this->lang->get('TOPRATEDPRODUCTS') ?></h1>
 			  			<div class="widget_body">
-			  				...
+			  				<?php $this->loadView('widget_item', array('list'=>$viewData['widget_toprated']))?>
 			  			</div>
 			  		</div>
 				  </div>
@@ -152,10 +169,19 @@
 	    		<div class="container">
 	    			<div class="row">
 						<div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
-							<form method="POST">
-                                <input class="subemail" name="email" placeholder="<?php $this->lang->get('SUBSCRIBETEXT') ?>">
-                                <input type="submit" value="<?php $this->lang->get('SUBSCRIBEBUTTON') ?>" />
-                            </form>
+
+
+							<form action="https://gmail.us20.list-manage.com/subscribe/post?u=9b1e11fe874765bf5f5a10d9b&amp;id=3088c68e28" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form target="_blank" novalidate>
+							    
+
+								<input type="email" value="" name="EMAIL" class="required email subemail" id="mce-EMAIL" placeholder="<?php $this->lang->get('SUBSCRIBETEXT') ?>">
+								<input type="hidden" name="b_9b1e11fe874765bf5f5a10d9b_3088c68e28" tabindex="-1" value="">
+							    <input type="submit" value="<?php $this->lang->get('SUBSCRIBEBUTTON') ?>">
+							    
+							</form>
+
+
+
 						</div>
 					</div>
 	    		</div>
@@ -224,8 +250,14 @@
 	    		</div>
 	    	</div>
 	    </footer>
-		<script type="text/javascript">var BASE_URL = '<?php echo BASE_URL; ?>';</script>
+		<script type="text/javascript">
+			var BASE_URL = '<?php echo BASE_URL; ?>';
+			<?php if(isset($viewData['filters'])): ?>
+			var maxslider = <?php echo $viewData['filters']['maxslider']; ?>;
+		 	<?php endif; ?>
+		</script>
 		<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
 	</body>

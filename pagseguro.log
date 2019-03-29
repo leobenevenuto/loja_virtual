@@ -1,0 +1,43 @@
+
+29/03/2019 10:43:22 PagSeguro.Session[info]: Begin
+29/03/2019 10:43:22 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 10:43:23 PagSeguro.Session[info]: Session ID: b5c34df0bc6548759e989cfcf845c9d5
+29/03/2019 10:51:49 PagSeguro.Session[info]: Begin
+29/03/2019 10:51:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 10:51:50 PagSeguro.Session[info]: Session ID: 8d299496313e4709af6ac16a6fba5cd9
+29/03/2019 10:51:58 PagSeguro.Session[info]: Begin
+29/03/2019 10:51:58 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 10:51:59 PagSeguro.Session[info]: Session ID: e67f9e7c030249f09dbb4bb2eecff909
+29/03/2019 10:54:01 PagSeguro.Session[info]: Begin
+29/03/2019 10:54:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 10:54:02 PagSeguro.Session[info]: Session ID: 245d033eff8a473e912996ccd5ceed93
+29/03/2019 11:02:02 PagSeguro.Session[info]: Begin
+29/03/2019 11:02:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:02:03 PagSeguro.Session[info]: Session ID: cc792e518b3346278c33b88d7f01838c
+29/03/2019 11:02:26 PagSeguro.Session[info]: Begin
+29/03/2019 11:02:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:02:26 PagSeguro.Session[info]: Session ID: c279c355d5254cfb8a1758eeb1ee4db2
+29/03/2019 11:02:55 PagSeguro.Session[info]: Begin
+29/03/2019 11:02:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:02:55 PagSeguro.Session[info]: Session ID: f05b62510a3e467591aa1041b51f7a6d
+29/03/2019 11:04:52 PagSeguro.Session[info]: Begin
+29/03/2019 11:04:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:04:52 PagSeguro.Session[info]: Session ID: 6dafa72757534dc9890722cf508ba9e8
+29/03/2019 11:05:29 PagSeguro.Session[info]: Begin
+29/03/2019 11:05:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:05:30 PagSeguro.Session[info]: Session ID: b43b94728b7841bbac32cc16b6b44668
+29/03/2019 11:05:47 PagSeguro.Session[info]: Begin
+29/03/2019 11:05:47 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:05:47 PagSeguro.Session[info]: Session ID: d755f102370b42ac895ea4b557736d24
+29/03/2019 11:06:46 PagSeguro.Session[info]: Begin
+29/03/2019 11:06:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:06:47 PagSeguro.Session[info]: Session ID: e6e534b9649e4b61a3d621ac3b065245
+29/03/2019 11:12:31 PagSeguro.Session[info]: Begin
+29/03/2019 11:12:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:12:31 PagSeguro.Session[info]: Session ID: cd293a9089a344439459b758d1a5cda4
+29/03/2019 11:17:01 PagSeguro.Session[info]: Begin
+29/03/2019 11:17:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:17:02 PagSeguro.Session[info]: Session ID: 6e8fdbed66a74a848e7df6757187f109
+29/03/2019 11:17:20 PagSeguro.Session[info]: Begin
+29/03/2019 11:17:20 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=leonardojbnv%40gmail.com&token=5DADECBDD88840469A23DFD513222A75
+29/03/2019 11:17:20 PagSeguro.Session[info]: Session ID: d4e909fb7e4644ffa7dce345a2a1ce78
